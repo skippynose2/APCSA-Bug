@@ -17,6 +17,8 @@ public class BugTester
       StartDirection = scan.nextInt();
       Bug ladyBug = new Bug(StartPos, StartDirection);
       // We are going to verify if the input that we passed into ladyBug works correctly
+      //The output should be the things we inputed
+      System.out.println(" The position is " + ladyBug.GetPosition() + " The direction is " + ladyBug.GetDirection());
     /*
     * Make the bug move one return value
     * Turn it around and move one and return value
