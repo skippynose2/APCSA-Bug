@@ -42,11 +42,16 @@ public class Bug
    public void moveOne()
    {
       /*If statement here to check if we are -100 or 100 and handle things accordingly*/
-      if(direction > 0){
-         position += 1;
+      if (position == -100 && direction < 0 || position == 100 && direction > 0){
+         System.out.println("The bug has no more rope to move on");
       }else
       {
-         position -= 1;
+         if(direction > 0){
+            position += 1;
+         }else
+         {
+            position -= 1;
+         }
       }
    }
    
