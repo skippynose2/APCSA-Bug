@@ -41,6 +41,7 @@ public class Bug
    
    public void moveOne()
    {
+      /*If statement here to check if we are -100 or 100 and handle things accordingly*/
       if(direction > 0){
          position += 1;
       }else
