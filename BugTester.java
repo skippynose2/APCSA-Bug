@@ -26,12 +26,13 @@ public class BugTester
     * Call TurnAround and call moveOne again
     * Have it return value
     * The code below makes sure the moveOne, TurnAround, GetPosition, GetDirection works. They do
+    * The code also shows message if the bug has no more rope to walk on
     */
     
       ladyBug.moveOne();
       System.out.println(ladyBug.GetPosition());
       ladyBug.TurnAround();
-      for (int i = 0; i <= 3; i++){
+      for (int i = 1; i <= 3; i++){
          ladyBug.moveOne();
       }
       System.out.println(ladyBug.GetPosition());
