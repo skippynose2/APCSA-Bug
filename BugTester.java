@@ -6,6 +6,16 @@
 import java.util.Scanner;
 public class BugTester
 {
+   /*
+      Items going to be tested
+      - moveOne()
+      - Bug with parameters
+      - Bug without parameters
+      - Turnaround
+      - Get position
+      - Get direction
+      - Set new position
+   */
    public static void main(String [] args)
    {
    //Get input to pass into a new bug class
@@ -26,9 +36,7 @@ public class BugTester
     * Call TurnAround and call moveOne again
     * Have it return value
     * The code below makes sure the moveOne, TurnAround, GetPosition, GetDirection works. They do
-    * The code also shows message if the bug has no more rope to walk on
-    */
-    
+    */    
       ladyBug.moveOne();
       System.out.println(ladyBug.GetPosition());
       ladyBug.TurnAround();
@@ -50,21 +58,22 @@ public class BugTester
       We are going to do what we did above, but this time we will create a Bug class and not pass in any parameters
       We will create Bug with no values and make it go three units, turn around and go two units 
       We will print direction and postion, the output should be "The postion is 1 the direction is -1"
+      ladyBug2 will be initlized with defualt values of position = 0 and direction 1
     */
       Bug ladyBug2 = new Bug();
-      for (int i = 0; i <=3; i++)
+      for (int i = 1; i <=3; i++)
       {
          ladyBug2.moveOne();
       }
       ladyBug2.TurnAround();
-      for(int i = 0; i <= 2; i++)
+      for(int i = 1; i <= 2; i++)
       {
          ladyBug2.moveOne();
       }
       System.out.println("The Position of bug 2 is " + ladyBug2.GetPosition() + " The Direction of bug 2 is " + ladyBug2.GetDirection());
      /*
       We are going to test SetPostion to 50
-      The final output here should be "The Position of bug 2 is 1  The Direction of bug 2 is -1"
+      The final output here should be "The Position of bug 2 is 50  The Direction of bug 2 is -1"
      */
       ladyBug2.setPosition(50);
       System.out.println("The Position of bug 2 is " + ladyBug2.GetPosition() + " The Direction of bug 2 is " + ladyBug2.GetDirection());
